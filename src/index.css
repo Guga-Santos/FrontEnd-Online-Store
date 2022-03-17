@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +8,242 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* -----------------------------------------Header */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0px 5% 0px 4%;
+
+  background-color: rgba(36, 0, 61, 1);
+  color: white;
+}
+
+.login {
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 50%;
+}
+
+.login input {
+  height: 24px;
+  margin-left: 5px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-img {
+  height: 50px;
+  margin-right: 20px;
+}
+
+.cart-counter {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+
+.counter {
+  position: absolute;
+  padding-right: 20%;
+  bottom: -2%;
+  pointer-events: none;
+}
+
+.logoName {
+  color: white;
+}
+
+ /* --------------------------------------------------- Buttons */
+
+.submit-btn {
+  width: 80px;
+  height: 30px;
+
+  border: none;
+
+  letter-spacing: 0.3rem;
+
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------ Home  */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0% 10%;
+}
+
+.input-btn-container {
+  width: 100%;
+  margin: auto;
+  align-items: center;
+}
+
+.input-btn-container input {
+  width: 70%;
+  height: 32px;
+
+  font-size: 1.2rem;
+}
+
+.input-btn-container button {
+  height: 40px;
+  border: none;
+  margin: 0px 0px 0px 10px;
+  padding-top: 5px ;
+  cursor: pointer;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.home-card-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---------------------------------------------------shoppingCart */
+
+.shoppingCart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5% 0;
+}
+
+.emptycart {
+  height: 50vh;
+  width: 40%;
+  padding-right: 3%;
+}
+
+.shoppingCart-items {
+  display: flex;
+  flex-direction: column;
+
+  width: 55%;
+  margin: 1% 0%;
+
+  background-color: rgb(245, 245, 245);
+}
+
+.img-and-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name-and-close {
+  display: flex;
+  align-items: flex-start;
+}
+
+
+/* ------------------------------------------------------categories */
+
+.categories-big-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.categories-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categories-btn {
+  height: 5vh;
+  width: 24.8%;
+
+  border: none;
+  margin: 1px;
+
+  font-size: 2vh;
+}
+
+.categories-btn:hover {
+  filter: brightness(95%);
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------Card */
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 20%;
+  margin: 2% 2%;
+}
+
+.card-image {
+  width: 100px;
+}
+
+/* ----------------------------------------------------Details */
+
+.big-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.product-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 30vw;
+
+  margin: 5vh 3vw;
+}
+
+.detail-img {
+  height: 50vh;
+  width: 30vw;
+}
+
+.image-box {
+  display: flex;
+  height: 50vh;
+}
+
+.little-imgs-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.little-imgs {
+  width: 100%;
+  height: 25%;
+}
+
+/* ----------------------------------------------------------Forms */
+
+.forms-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
