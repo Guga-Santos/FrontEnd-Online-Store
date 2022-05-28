@@ -10,6 +10,7 @@ class ShoppingCart extends Component {
     this.state = {
       products: JSON.parse(localStorage.getItem('shopping')),
       checkout: false,
+      length: JSON.parse(localStorage.getItem('length'))
     };
   }
 
@@ -19,7 +20,10 @@ class ShoppingCart extends Component {
   }
 
  handleIncrease = ({ target: { id } }) => {
+   const { products } = this.state
    const ids = id;
+   const find = products.find((ele) => ele.id === ids);
+   localStorage.setItem('length', JSON.stringify([...products, find]));
    this.setState((prev) => ({
      [ids]: prev[ids] + 1,
    }));

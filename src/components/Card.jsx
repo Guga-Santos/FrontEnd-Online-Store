@@ -8,33 +8,33 @@ class Card extends Component {
     return (
       <div
         data-testid="product"
+        className="cards-div"
       >
         <Link
           to={ { pathname: `/ProductDetails/${id}`,
             state: { title, id, price, thumbnail } } }
           data-testid="product-detail-link "
+          style={ { textDecoration: 'none' } }
         >
-          <h3
+          <h4
             data-testid="product-detail-name"
+            className="cardName"
           >
             {title}
 
-          </h3>
-          <img
-            src={ thumbnail }
-            alt={ id }
-            className="card-image"
-          />
-          <h4>{price}</h4>
+          </h4>
+          <div className="card-image-box">
+            <img
+              src={ thumbnail }
+              alt={ id }
+              className="card-image"
+            />
+          </div>
+          <h4 className="price">
+            R$
+            {price}
+          </h4>
         </Link>
-        {/* <button
-          type="button"
-          data-testid="product-add-to-cart"
-          id={ id }
-          onClick={ onClick }
-        >
-          Adicionar ao carrinho
-        </button> */}
       </div>
     );
   }

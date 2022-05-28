@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Card from '../components/Card';
 import Categories from '../components/Categories';
 import {
-  getCategories, getProductsfromCategory, getProductsFromTerm,
+  getCategories, getProductsfromCategory, getProductsFromTerm
 } from '../services/api';
 
 class Home extends Component {
@@ -82,12 +82,13 @@ class Home extends Component {
                 onClick={ this.getCardFromClick }
               />
               <button
+                className="card-home-button"
                 type="button"
                 data-testid="product-add-to-cart"
                 id={ obj.id }
                 onClick={ this.getCardFromClick }
               >
-                Adicionar ao carrinho
+                ADICIONAR AO CARRINHO
               </button>
             </div>
           ))

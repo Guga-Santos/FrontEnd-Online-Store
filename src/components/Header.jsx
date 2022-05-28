@@ -9,12 +9,14 @@ class Header extends Component {
 
     this.state = {
       shopping: JSON.parse(localStorage.getItem('shopping')),
+      length: JSON.parse(localStorage.getItem('length'))
     };
   }
 
+
   render() {
-    const { shopping } = this.state;
-    const { length } = this.props;
+    const { shopping, length } = this.state;
+
     return (
       <div className="header-container">
         <div className="logo">
@@ -26,7 +28,13 @@ class Header extends Component {
           </Link>
 
           <div className="cart-counter">
-            <h2 className="counter">{length}</h2>
+            <h2
+              className="counter"
+              data-testid="shopping-cart-size "
+            >
+              {length && length.length}
+
+            </h2>
             <Link
               to={ { pathname: '/shoppingCart', state: { shopping } } }
               data-testid="shopping-cart-button"
